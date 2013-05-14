@@ -1,0 +1,27 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.frame {
+	width: 1145px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.design {
+	height: 25%;
+	width: 100%;
+	border-bottom: 1px solid #121212;
+	overflow: scroll;
+}
+
+.code {
+	height: 75%;
+	width: 100%;
+	position: relative;
+	overflow: scroll;
+}
