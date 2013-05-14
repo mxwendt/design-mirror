@@ -1,3 +1,7 @@
+* {
+	position: relative;
+}
+
 html {
 	height: 100%;
 }
@@ -13,15 +17,14 @@ body {
 }
 
 .design {
-	height: 25%;
+	height: 50%;
 	width: 100%;
 	border-bottom: 1px solid #121212;
 	overflow: scroll;
 }
 
 .code {
-	height: 75%;
+	height: 50%;
 	width: 100%;
-	position: relative;
 	overflow: scroll;
 }
