@@ -1,0 +1,23 @@
+/**
+ * Design Mirror view tool
+ */
+
+.view {
+	padding: 10px;
+}
+
+.view a {
+	display: block;
+	padding: 5px 0;
+	color: white;
+	text-decoration: none;
+}
+
+.view a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+.view .is-active {
+	color: darksalmon;
+}
