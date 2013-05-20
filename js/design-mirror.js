@@ -1,18 +1,24 @@
 $(document).ready(function() {
 	console.info("DOM READY");
 
+	/**
+	 * Setup Design Mirror
+	 */
 	$('.code').children('.inner').height($('.design').children('.inner').height());
 
 	$('.design').scroll(function() {
-		console.info("SCROLLING");
+		// console.info("SCROLLING");
 		$('.code').scrollTop($(this).scrollTop());
 	});
 
 	$('.code').scroll(function() {
-		console.info("SCROLLING");
+		// console.info("SCROLLING");
 		$('.design').scrollTop($(this).scrollTop());
-	}); 
+	});
 
+	/**
+	 * Setup Design Mirror view tool
+	 */
 	$('#half').click(function(e) {
 		e.preventDefault();
 		$('.design').css("height", "50%");
@@ -53,6 +59,9 @@ $(document).ready(function() {
 		$(this).addClass('is-active');
 	});
 
+	/**
+	 * Setup Design Mirror guides tool
+	 */
 	$('.design').click(function(e) {
 		console.info("pageX: " + e.pageX);
 		console.info("pageY: " + e.pageY);

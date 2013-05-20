@@ -10,38 +10,53 @@ body {
 	height: 100%;
 }
 
+/* Wrap around code and design */
 .frame {
 	width: 1145px;
 	height: 100%;
-	margin: 0 auto;
+	margin-left: 100px;
 }
 
+/* Vertical divider between code and design */
+.resizer {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	border-bottom: 1px dashed #333333;
+}
+
+/* Container for the design preview */
 .design {
 	height: 50%;
 	width: 100%;
-	border-bottom: 1px solid #121212;
 	overflow: scroll;
 }
 
+/* Container for the code preview (workspace) */
 .code {
 	height: 50%;
 	width: 100%;
 	overflow: scroll;
 }
 
+/* Design Mirror tools */
 .tools {
-	width: 1145px;
-	margin: 0 auto;
-	background-color: #121212;
+	width: 100px;
+	height: 100%;
+	float: left;
+	background-color: #333333;
 	color: white;
+	z-index: 1;
 }
 
+/* Design Mirror view tool */
 .view {
 	padding: 10px;
 }
 
 .view a {
-	padding: 5px;
+	display: block;
+	padding: 5px 0;
 	color: white;
 	text-decoration: none;
 }
@@ -53,6 +68,22 @@ body {
 
 .view a.is-active {
 	color: darksalmon;
+}
+
+/* Design Mirror guides tool */
+.guides {
+	padding: 10px;
+}
+
+.guides a {
+	display: block;
+	padding: 5px 0;
+	color: white;
+	text-decoration: none;
+}
+
+.guides a.is-active {
+	content: darksalmon;
 }
 
 .guide {
