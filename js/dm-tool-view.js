@@ -4,46 +4,38 @@
 
 DMToolView = function () {
 
+	var $buttons,
+		$resizer,
+		$design,
+		$code;
+
 	function init() {
-		$('#half').click(function(e) {
-			e.preventDefault();
-			$('.design').css("height", "50%");
-			$('.code').css("height", "50%");
-			$('.view').find('.is-active').removeClass('is-active');
-			$(this).addClass('is-active');
-		});
+		$resizer = $('.resizer');
+		$buttons = $('#split, #design, #code');
+		$design = $('.design');
+		$code = $('.code');
 
-		$('#third').click(function(e) {
+		$buttons.click(function(e) {
 			e.preventDefault();
-			$('.design').css("height", "34%");
-			$('.code').css("height", "66%");
+			switch (e.target.id) {
+				case "split": setContainerHeights("50%", "50%", true); break;
+				case "design": setContainerHeights("100%", "0%"); break;
+				case "code": setContainerHeights("0%", "100%"); break;
+				default: setContainerHeights("50%", "50%"); break;
+			}
 			$('.view').find('.is-active').removeClass('is-active');
 			$(this).addClass('is-active');
 		});
+	}
 
-		$('#quarter').click(function(e) {
-			e.preventDefault();
-			$('.design').css("height", "25%");
-			$('.code').css("height", "75%");
-			$('.view').find('.is-active').removeClass('is-active');
-			$(this).addClass('is-active');
-		});
-
-		$('#design').click(function(e) {
-			e.preventDefault();
-			$('.design').css("height", "100%");
-			$('.code').css("height", "0%");
-			$('.view').find('.is-active').removeClass('is-active');
-			$(this).addClass('is-active');
-		});
-
-		$('#code').click(function(e) {
-			e.preventDefault();
-			$('.design').css("height", "0%");
-			$('.code').css("height", "100%");
-			$('.view').find('.is-active').removeClass('is-active');
-			$(this).addClass('is-active');
-		});
+	function setContainerHeights(designHeight, codeHeight, showDivider) {
+		$design.css("height", designHeight);
+		$code.css("height", codeHeight);
+		if (showDivider) {
+			$resizer.css("top", designHeight).show();
+		} else {
+			$resizer.hide();
+		}
 	}
 
 	return {

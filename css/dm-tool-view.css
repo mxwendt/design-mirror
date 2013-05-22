@@ -21,3 +21,12 @@
 .view .is-active {
 	color: darksalmon;
 }
+
+/* Vertical divider between code and design */
+.resizer {	
+	width: 100%;
+	border-bottom: 1px dashed #333333;
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+}

@@ -8,6 +8,7 @@ html {
 
 body {
 	height: 100%;
+	background-color: lightGray;
 }
 
 /* Wrap around code and design */
@@ -17,19 +18,12 @@ body {
 	margin-left: 100px;
 }
 
-/* Vertical divider between code and design */
-.resizer {
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	border-bottom: 1px dashed #333333;
-}
-
 /* Container for the design preview */
 .design {
 	height: 50%;
 	width: 100%;
 	overflow: scroll;
+	background-color: white;
 }
 
 /* Container for the code preview (workspace) */
@@ -37,6 +31,16 @@ body {
 	height: 50%;
 	width: 100%;
 	overflow: scroll;
+	background-color: white;
+}
+
+/* The canvas for boundaries */
+.inner {
+	height: 100%;
+}
+
+.design-image {
+	display: block;
 }
 
 /* Design Mirror tools */

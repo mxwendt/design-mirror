@@ -1,3 +1,5 @@
+<?php include("inc/dm-tool-guides.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +20,10 @@
 
 </head>
 <body>
-
 	<div class="tools">
 		<div class="view">
 			View:
-			<a href="#" id="half" class="is-active">half</a>
-			<a href="#" id="third">third</a>
-			<a href="#" id="quarter">quarter</a>
+			<a href="#" id="split" class="is-active">split</a>
 			<a href="#" id="design">design only</a>
 			<a href="#" id="code">code only</a>
 		</div>
@@ -38,18 +37,18 @@
 	<div class="frame">
 		<div class="design">		
 			<div class="inner">
-				<div class="guide"></div>
-				<img src="do-lectures.png" alt="">
+				<div class="guides-wrapper">
+					<?php echo get_guides_html($h_guides, $v_guides) ?>
+				</div>
+				<img class="design-image" src="do-lectures.png" alt="">
 			</div>
 		</div>
 		<div class="resizer"></div>
 		<div class="code"><!--img src="do-lectures.png" alt=""-->
 			<div class="inner">
-				<div class="guide"></div>
-				<a href="#">Talks</a>
-				<a href="#">Speakers</a>
-				<a href="#">Events</a>
-				<a href="#">Workshops</a>
+				<div class="guides-wrapper">
+					<?php echo get_guides_html($h_guides, $v_guides) ?>
+				</div>
 			</div>
 		</div>
 	</div>
