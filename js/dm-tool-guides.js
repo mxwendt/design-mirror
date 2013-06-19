@@ -27,10 +27,10 @@ DMToolGuides = function () {
 		manageStates();
 
 		$saveButton.click(saveGuidesToFile);
+		$clearButton.click(clearGuides);
 	}
 
 	function importGuides() {
-		// TODO: Reflect JSON in object
 		$.getJSON("guides.json", function(data) {
 			guides = data;
 			addJSONGuides(guides);
@@ -41,7 +41,17 @@ DMToolGuides = function () {
 		$.post("inc/dm-tool-save-guides.php", {
 			json: JSON.stringify(guides)
 		}).fail(function() {
-			console.log("failed to save json file");
+			console.log("Failed to save json file");
+		});
+	}
+
+	function clearGuides() {
+		guides.vertical = [];
+		guides.horizontal = [];
+		$.post("inc/dm-tool-save-guides.php", {
+			json: JSON.stringify(guides)
+		}).success(function() {
+			window.location.reload();
 		});
 	}
 
