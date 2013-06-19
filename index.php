@@ -1,4 +1,7 @@
-<?php include("inc/dm-tool-guides.php"); ?>
+<?php 
+	include("inc/dm-tool-guides.php");
+	include("inc/dm-tool-save-guides.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +43,7 @@
 		<div class="design">		
 			<div class="inner">
 				<div class="guides-wrapper">
-					<?php echo get_guides_html($h_guides, $v_guides) ?>
+					<!--?php echo get_guides_html($h_guides, $v_guides) ?-->
 				</div>
 				<!-- Place the design here -->
 				<img class="design-image" src="do-lectures.png" alt="">
@@ -50,7 +53,7 @@
 		<div class="code">
 			<div class="inner">
 				<div class="guides-wrapper">
-					<?php echo get_guides_html($h_guides, $v_guides) ?>
+					<!--?php echo get_guides_html($h_guides, $v_guides) ?-->
 				</div>
 				<!-- Link to the template here -->
 				<iframe id="template" src="template.html"></iframe>
