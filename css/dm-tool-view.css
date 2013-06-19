@@ -13,6 +13,10 @@
 	text-decoration: none;
 }
 
+.view a:first-child {
+	margin-top: 5px;
+}
+
 .view a:hover {
 	color: gray;
 	text-decoration: underline;

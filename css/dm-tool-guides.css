@@ -13,8 +13,17 @@
 	text-decoration: none;
 }
 
+.guides a:first-child {
+	margin-top: 5px;
+}
+
+.guides a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
 .guides .is-active {
-	content: darksalmon;
+	color: darksalmon;
 }
 
 .guides-wrapper {

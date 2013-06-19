@@ -29,8 +29,10 @@
 		</div>
 		<div class="guides">
 			Guides:
-			<a href="#" id="v">vertical</a>
-			<a href="#" id="h">horizontal</a>
+			<a href="#" class="button" id="v">vertical</a>
+			<a href="#" class="button" id="h">horizontal</a>
+			<a href="#" class="button" id="save">Save</a>
+			<a href="#" class="button" id="clear">Clear</a>
 		</div>
 	</div>
 	
@@ -40,15 +42,18 @@
 				<div class="guides-wrapper">
 					<?php echo get_guides_html($h_guides, $v_guides) ?>
 				</div>
+				<!-- Place the design here -->
 				<img class="design-image" src="do-lectures.png" alt="">
 			</div>
 		</div>
 		<div class="resizer"></div>
-		<div class="code"><!--img src="do-lectures.png" alt=""-->
+		<div class="code">
 			<div class="inner">
 				<div class="guides-wrapper">
 					<?php echo get_guides_html($h_guides, $v_guides) ?>
 				</div>
+				<!-- Link to the template here -->
+				<iframe src="template.html"></iframe>
 			</div>
 		</div>
 	</div>
