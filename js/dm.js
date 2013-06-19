@@ -5,10 +5,16 @@ $(document).ready(function() {
 	 * Setup Design Mirror
 	 */
 
+	var imageW = $('.design-image').width();
 	var imageH = $('.design-image').height();
 
-	$('.design').children('.inner').height(imageH);
-	$('.code').children('.inner').height(imageH);
+	$('.design').children('.inner').width(imageW).height(imageH);
+	$('.code').children('.inner').width(imageW).height(imageH);
+
+	$('#template').attr({
+		'width': imageW,
+		'height': imageH
+	});
 
 	$('.design').scroll(function() {
 		// console.info("SCROLLING");

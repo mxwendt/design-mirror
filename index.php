@@ -53,7 +53,7 @@
 					<?php echo get_guides_html($h_guides, $v_guides) ?>
 				</div>
 				<!-- Link to the template here -->
-				<iframe src="template.html"></iframe>
+				<iframe id="template" src="template.html"></iframe>
 			</div>
 		</div>
 	</div>
